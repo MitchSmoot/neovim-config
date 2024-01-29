@@ -151,12 +151,16 @@ require('lazy').setup({
 
 -- THEME --
 
+  -- {
+  --  'navarasu/onedark.nvim',
+  --  priority = 1000,
+  --  config = function()
+  --    vim.cmd.colorscheme 'onedark'
+  --  end,
+  -- },
   {
-    'navarasu/onedark.nvim',
+    "olimorris/onedarkpro.nvim",
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
   },
 --  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
@@ -621,26 +625,13 @@ cmp.setup {
   },
 }
 
-local harpoon = require('harpoon')
-harpoon:setup({})
+-- theme settings
+-- require ('onedark').setup {
+--   style = 'darker',
+--   toggle_style_key = "<leader>ts",
+-- }
 
--- basic telescope configuration
-local conf = require("telescope.config").values
-local function toggle_telescope(harpoon_files)
-    local file_paths = {}
-    for _, item in ipairs(harpoon_files.items) do
-        table.insert(file_paths, item.value)
-    end
-
-    require("telescope.pickers").new({}, {
-        prompt_title = "Harpoon",
-        finder = require("telescope.finders").new_table({
-            results = file_paths,
-        }),
-        previewer = conf.file_previewer({}),
-        sorter = conf.generic_sorter({}),
-    }):find()
-end
+vim.cmd("colorscheme onedark_dark")
 
 -- relative line numbers
 vim.wo.relativenumber = true

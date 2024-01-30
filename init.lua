@@ -632,6 +632,13 @@ cmp.setup {
 -- }
 
 vim.cmd("colorscheme onedark_dark")
+require("onedarkpro").setup({
+  highlights = {
+    Comment = { italic = true },
+    Directory = { bold = true },
+    ErrorMsg = { italic = true, bold = true },
+  }
+})
 
 -- relative line numbers
 vim.wo.relativenumber = true

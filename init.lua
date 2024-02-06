@@ -634,6 +634,12 @@ vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end,
 -- initialize Oil.nvim
 require("oil").setup()
 
+-- initialize colorizer
+require 'colorizer'.setup({
+  'css';
+  'scss';
+})
+
 require("core.keymaps")
 
 -- The line beneath this is called `modeline`. See `:help modeline`

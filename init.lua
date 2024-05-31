@@ -636,9 +636,9 @@ require("oil").setup()
 
 -- initialize colorizer
 require 'colorizer'.setup({
-  'css';
+  css = { rgb_fn = true; };
   'scss';
-})
+});
 
 require("core.keymaps")
 

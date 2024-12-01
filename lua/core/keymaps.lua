@@ -21,8 +21,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Harpoon Keymaps
 harpoon:setup()
-keymap.set("n", "<leader>a", function() harpoon:list():append() end, { desc = "Open Harpoon List" })
-keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+keymap.set("n", "<leader>a", function() harpoon:list():append() end, { desc = "Append to Harpoon List" })
+keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Open Harpoon List" })
 
 keymap.set("n", "<leader>1", function() harpoon:list():select(1) end, { desc = "Open Harpoon Window 1" })
 keymap.set("n", "<leader>2", function() harpoon:list():select(2) end, { desc = "Open Harpoon Window 2" })

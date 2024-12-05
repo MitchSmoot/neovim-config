@@ -127,19 +127,9 @@ require('lazy').setup({
   },
 
 -- THEME --
-
-  -- {
-  --  'navarasu/onedark.nvim',
-  --  priority = 1000,
-  --  config = function()
-  --    vim.cmd.colorscheme 'onedark'
-  --  end,
-  -- },
-  {
-    "olimorris/onedarkpro.nvim",
-    priority = 1000,
-  },
---  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "folke/tokyonight.nvim", config = function() vim.cmd.colorscheme "tokyonight" end },
+  --{ "olimorris/onedarkpro.nvim", priority = 1000 },
+  --{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   {
     -- Set lualine as statusline

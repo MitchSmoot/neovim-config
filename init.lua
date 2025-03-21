@@ -127,8 +127,8 @@ require('lazy').setup({
   },
 
 -- THEME --
-  { "folke/tokyonight.nvim", config = function() vim.cmd.colorscheme "tokyonight" end },
-  --{ "olimorris/onedarkpro.nvim", priority = 1000 },
+  { "olimorris/onedarkpro.nvim" },
+  --{ "folke/tokyonight.nvim", config = function() vim.cmd.colorscheme "tokyonight" end },
   --{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   {
